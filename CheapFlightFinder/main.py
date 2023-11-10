@@ -11,7 +11,10 @@ import smtplib
 
 # ==========================
 
-# url of the google sheet, you can either use this one or use your own
+# url of the excel sheet, you need to have your own excel sheet in sheety with registered users
+URL_TO_EXCEL_SHEET_WITH_REGISTERED_USERS = ""
+
+# url of the excel sheet, you can either use this one or use your own
 sheety_url_to_create_rows_for_flights = "https://api.sheety.co/7a5ff8bcf6a27b16eef1db60f1915888/aeroports/prices"
 
 # api key needed to be obtained from tequila website
@@ -94,7 +97,7 @@ email = input("Plase enter your email: ").strip().lower()
 
 # sheety API url to add a new user
 # ==========================
-sheety_url_to_create_rows_for_users = "https://api.sheety.co/7a5ff8bcf6a27b16eef1db60f1915888/aeroports/users"
+sheety_url_to_create_rows_for_users = URL_TO_EXCEL_SHEET_WITH_REGISTERED_USERS
 # ==========================
 
 # parameters to add new user
