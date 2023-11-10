@@ -15,7 +15,7 @@ PRODUCT_LINK = "https://www.amazon.com.au/HonHey-Handheld-Portable-Rechargeable-
 
 # the header files you need to provide in order to get access to amazon web page contents
 headers = {
-    "EMAIL-Agent": "to_be_written",
+    "User-Agent": "to_be_written",
     "Accept-Language": "to_be_written"
 }
 
