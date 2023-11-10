@@ -47,7 +47,10 @@ response = requests.get(url=PRODUCT_LINK,
 # and scraping the price of the product
 # ========================
 soup = BeautifulSoup(response.text, "html.parser")
-price = float(soup.find(class_="a-price-whole").getText())
+try:
+    price = float(soup.find(class_="a-price-whole").getText())
+except AttributeError:
+    print("\n\n\nSorry, the price of the product could not be received\n\n\n")
 # ========================
 
 # if the price is less than the specified amount, the code will send an email
