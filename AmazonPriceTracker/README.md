@@ -1,6 +1,6 @@
 # Low Price Tracker
 
-This is the code that uses **Requests** and **BeautifulSoup** in order to scrape the data from the amazon website. It takes the link to Amazon product and checks whether its price is lower than the threshold price that the user sets. If it is, the user will receive an email about low price alert with the link to that product and they will know that they can buy it. 
+This is the code that uses **Requests** and **BeautifulSoup** in order to scrape the data from the amazon website. It takes the link to Amazon product and checks whether its price is lower than the threshold price that the user sets. If it is, the user will receive an email about low price alert with the link to that product and they will know that they can buy it. The email is sent using **SMTP** module.
 
 The code has to be run every specified amount of time to keep track of the price.
 
