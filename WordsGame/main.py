@@ -1,5 +1,6 @@
 from tkinter import *
 from requests import get
+import os
 
 # =======================================================================================
 # Choosing suffix
@@ -80,9 +81,15 @@ def end_game():
             for word in words_to_write:
                 file.write(f"{word}\n")
     except FileNotFoundError:
-        with open(f"./words/{suffix}_words.txt", "w") as file:
-            for word in already_said_words:
-                file.write(f"{word}\n")
+        try:
+            with open(f"./words/{suffix}_words.txt", "w") as file:
+                for word in already_said_words:
+                    file.write(f"{word}\n")
+        except FileNotFoundError:
+            os.mkdir("words")
+            with open(f"./words/{suffix}_words.txt", "w") as file:
+                for word in already_said_words:
+                    file.write(f"{word}\n")
     window.destroy()
 
 
@@ -104,4 +111,3 @@ window.bind("<Return>", entered)
 window.bind("'", entered)
 
 window.mainloop()
-
