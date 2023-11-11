@@ -49,7 +49,10 @@ bar.send_keys(LINKED_IN_PASSWORD)
 button = linked_in_driver.find_element(By.CLASS_NAME, "login__form_action_container").find_element(By.TAG_NAME, "button")
 button.click()
 
-sleep(2)
+# this is to ensure that if LinkedIn requires some additional checking to log into your account,
+# you could do it and then continue the program without breaking it
+print("Please confirm that you are logged in")
+input()
 
 # =============================
 
