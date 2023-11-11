@@ -119,7 +119,7 @@ canvas.grid(row=0, column=1)
 # ==================================================================
 
 website_entry.focus()
-username_entry.insert(0, "quluzadea73@gmail.com")
+username_entry.insert(0, "example@email.com")
 
 # ==================================================================
 
